@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+         
+         <!-- Connect DButil, controller, java file -->
+         <!-- Fetch the data in the database -->
+         
+	<servlet>
+		<servlet-name>product</servlet-name>
+		<servlet-class>com.product.productServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>product</servlet-name>
+		<url-pattern>/produ</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>productinsert</servlet-name>
+    	<servlet-class>com.product.Productinsert</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    	<servlet-name>productinsert</servlet-name>
+    	<url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>updateproducts</servlet-name>
+    <servlet-class>com.product.UpdateproductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>updateproducts</servlet-name>
+    	<url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    
+	<servlet>
+    <servlet-name>deleteproduct</servlet-name>
+    <servlet-class>com.product.DeleteproductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>deleteproduct</servlet-name>
+    	<url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+     <servlet-name>paymentinsert</servlet-name>
+     <servlet-class>com.product.Paymentinsert</servlet-class>
+</servlet>
+
+<servlet-mapping>
+     <servlet-name>paymentinsert</servlet-name>
+     <url-pattern>/payment</url-pattern>
+</servlet-mapping>
+    
+	</web-app>
+	
+	
